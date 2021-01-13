@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Portfolio Harold_delory</title>
+
+    <!-- Parallax effect -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+
+    
+    </head>
+<body>
+    <!-- Alertes -->
+    <div class="alerte show">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg"> Merci de votre visite ! Le site est encore en production et toutes les features ne sont pas présentes. Merci de votre compréhension</span>
+        <button class="close-btn close-alert">
+            <span class="fas fa-times"></span>
+        </button>
+    </div>
+
+    <!--NavBar-->  
+    <nav class="nav">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#">Mon Portfolio</a>
+            </div>
+            <!-- Liste lien navbar -->
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#school">Parcours</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#experiences">Expériences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Fait apparaitre le bouton pour le menu réduit -->
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+
+    <!-- Image background parallax -->
+    <div class="parallax" data-parallax="scroll" data-image-src="images/test3.jpg">
+        <!-- Zone d'introduction -->
+        <div class="intro-box container mx-auto">
+            <div class="row">
+              <div class="col-sm">
+                <img src="images/PP2.png" id="pp" alt="">
+              </div>
+              <div class="col-sm" id="self-about">
+                  <p class="paragraphe" id="intro-text">
+                      <h2 class="monH2">Harold Delory</h2><br><br><br>
+                      Actuellement en deuxième de DUT informatique à l'IUT de lens.
+                      Je suis passionné pour le domaine de développement web notamment, soucieux de bien faire, 
+                      mon plus gros passe temps est de découvrire de nouvelles choses en informatique, dans la technologie ou tout autre domaine 
+                  </p>
+              </div>
+            </div>
+        </div>  
+    </div>    
+
+
+    <!--Time line-->
+    <div class="container-fluid-profil" id="school">
+        <section>
+        <h2 class="titre-Partie">Parcours</h2>
+        <div class="container">
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>DUT informatique</h3>
+                            <p>IUT de lens</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>Baccalauréat Economique et social</h3>
+                            <p>Lycée Voltaire de Wingles</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </section>
+    </div>
+
+
+    <!-- Compétences -->
+    <div class="container-fluid-profil fond-gris" id="skills">
+        <h2 class="titre-Partie">Compétences</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 skill">
+                    <img src="images/competences/web-design.png" alt="" style="width: 60%;">
+                    <p class="title-skill font-weight-bold">Web design</p>
+                    <p>HTML5 / CSS3 / PHP / JS</p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 skill">
+                    <span style="color: rgb(9, 55, 102);">
+                        <i class="fas fa-code fa-7x"></i>
+                    </span>
+                    <p class="title-skill font-weight-bold">Programmation </p>
+                    <p>Java / Python</p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 skill">
+                    <span style="color: rgb(40, 143, 202);">
+                        <i class="fas fa-database fa-7x"></i>
+                    </span>
+                    <p class="title-skill font-weight-bold">Base de données</p>
+                    <p>MySQL / PostgreSQL / PLSQL</p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 skill">
+                    <i class="fas fa-server fa-7x"></i>
+                    <p class="title-skill font-weight-bold">Réseaux</p>
+                    <p>Routage / configuration IP</p>
+                </div><div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 skill">
+                    <img src="images/competences/system.ico" alt="">
+                    <p class="title-skill font-weight-bold">Systèmes</p>
+                    <p>Ubuntu / Fedora / Windows</p>
+                </div><div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 skill">
+                    <img src="images/competences/language.png" alt="" style="width: 65%;">
+                    <p class="title-skill font-weight-bold">Languages</p>
+                    <p>Français / Anglais</p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 skill">
+                    <img src="images/competences/outils-collaboratifs.svg" alt="" style="width: 65%;">
+                    <p class="title-skill font-weight-bold">Outils collaboratif</p>
+                    <p>GitLab</p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 skill">
+                    <span style="color :rgb(252, 109, 38);">
+                        <i class="fab fa-phoenix-framework fa-7x"></i>
+                    </span>
+                    <p class="title-skill font-weight-bold">Framework</p>
+                    <p>Bootstrap / Laravel</p>
+                </div>
+                <div class="CV container">
+                    <a href="Harold_Delory.pdf" class="btn" target="_blank" role=>Voir mon CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Projets -->
+    <div class="container-fluid" id="experiences">
+        <h2 class="titre-Partie">Experiences</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="filters text-center">
+                    <li class="active" data-filter="*"><a href="#!">All</a></li>
+                    <li data-filter=".html"><a href="#!">HTML</a></li>
+                    <li data-filter=".php"><a href="#!">PHP</a></li>
+                    <li data-filter=".java"><a href="#!">Java</a></li>  <!--data-filter=".[filter]" permet de définir les filtres-->
+                </ul>
+
+                <div class="projects">
+                    <div class="row">
+                        <!--Ajouter le filtre à la classe permet de désigner à quel filtre il appartient-->
+                        <div class="col-lg-4 item html">
+                            <div class="card">
+                                <div class="card-head">
+                                    <img src="images/projets/Portfolio.png" alt="" class="img-fluid card-img">
+                                    <div class="card-overlay"><h2>Portfolio</h2></div>
+                                    <div class="card-hover">
+                                        <h2>Portfolio</h2>
+                                        <p> Ceci est un projet personnel, effectuer principalement en HTML / CSS / JavaScript <br>
+                                            Avec quelques Framework : Bootstrap / FontAwesome.<br>
+                                            J'y présente ma personnalité, mes compétences ainsi que mes projets.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center">
+                                    <h4 class="title">HTML</h4>
+                                    <a href="#!" class="btn btn-lg card-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 item php">
+                            <div class="card">
+                                <div class="card-head">
+                                    <img src="images/image.jpg" alt="" class="img-fluid card-img">
+                                    <div class="card-overlay"><h2>Projet Marathon</h2></div>
+                                    <div class="card-hover">
+                                        <h2>Projet Marathon</h2>
+                                        <p>Projet de groupe du 3ème, nous avions 2 jours pour effectuer un site dans un thème donné<br>
+                                           Nous avons utiliser les langages suivant : PHP/HTML/CSS.<br>
+                                           Nous avons également utiliser le framework laravel.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center">
+                                    <h4 class="title">PHP</h4>
+                                    <a href="https://github.com/Skilldron/ludotheque-marathon" target="_blank" class="btn btn-lg card-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 item java">
+                            <div class="card">
+                                <div class="card-head">
+                                    <img src="images/image.jpg" alt="" class="img-fluid card-img">
+                                    <div class="card-overlay"><h2>Jeux video</h2></div>
+                                    <div class="card-hover">
+                                        <h2>Escape Game</h2>
+                                        <p>Projet de groupe du 2ème semestre, nous devions créer un jeu 2D qui à pour thème un Escape game.
+                                           Nous avons utliser le langage java pour créer ce jeu.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center">
+                                    <h4 class="title">Java</h4>
+                                    <a href="https://github.com/Skilldron/projetS2-jeu" target="_blank" class="btn btn-lg card-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 item html">
+                            <div class="card">
+                                <div class="card-head">
+                                    <img src="images/image.jpg" alt="" class="img-fluid card-img">
+                                    <div class="card-overlay"><h2>Refonte du site de l'IUT de lens</h2></div>
+                                    <div class="card-hover">
+                                        <h2>Refonte du site de l'IUT de lens</h2>
+                                        <p>Projet de groupe du 1er semestre, nous devions refaire toute la partie "Partir à l'étranger"<br>
+                                           Les langages utilisés sont HTML/CSS/JavaScript ainsi que Bootstrap.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center">
+                                    <h4 class="title">HTML</h4>
+                                    <a href="https://github.com/Skilldron/projet_cdin" target="_blank" class="btn btn-lg card-btn">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container" id="contact">
+            
+        <!-- Formulaire de contact -->
+<div class="wrap-contact100">
+    <form action="#" class="contact100-form validate-form">
+        <span class="contact100-form-title">
+            Envoyez moi un message <br>
+            harold.delory@gmail.com
+        </span>
+
+        <div class="wrap-input100 validate-input" data-validate="Veuillez entrer votre nom">
+            <input class="input100" type="text" name="name" placeholder="Nom Prénom">
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Insérer un E-mail de type : exemple@domaine.com">
+            <input class="input100" type="text" name="email" placeholder="E-mail">
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Insérer votre message">
+            <textarea class="input100" name="message" placeholder=" Message"></textarea>
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="container-contact100-form-btn">
+            <button type="submit" class="contact100-form-btn">
+                <span>
+                    <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                    Envoyer
+                </span>
+            </button>
+        </div>
+    </form>
+</div>
+</div>
+
+        <div class="separation">
+        </div>
+
+        <!-- Réseau sociaux-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="https://www.linkedin.com/in/harold-delory-20b113200/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                </div>
+                <div class="col-sm">
+                    <a href="https://github.com/skilldron"><i class="fab fa-github fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Script Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Isotope (filtre)-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <!-- Script JS -->    
+    <script src="js/anime.js"></script>
+    <script src="js/filter.js"></script>
+
+
+</body>
+</html>

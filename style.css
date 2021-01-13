@@ -1,0 +1,797 @@
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url('fonts/Ubuntu-Bold.ttf'); 
+  }
+  
+  
+  
+/*//////////////////////////////////////////////////////////////////
+ [ RESTYLE TAG ]*/
+ 
+* {
+    margin: 0px; 
+    padding: 0px; 
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin-top: 55px;
+}
+
+body, html {
+    height: 100%;
+    font-family: Ubuntu-Bold, sans-serif;
+}
+
+/*////////////////// Alertes //////////////////*/
+
+.alerte{
+    background: rgb(75, 75, 75);
+    padding: 20px 40px;
+    min-width: 420px;
+    z-index: 15;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    border-radius: 5px;
+    border-left: 8px solid rgb(41, 41, 41);
+}
+
+.alerte.show {
+    animation: show_slide 0.7s ease forwards;
+}
+@keyframes show_slide{
+    0%{
+        transform: translateX(100%);
+    }
+}
+
+.alerte.hide {
+        animation: hide_slide 0.7s ease forwards;
+}
+@keyframes hide_slide{
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+.alerte .fa-exclamation-circle{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 20px;
+}
+
+.alerte .msg{
+    padding: 0 15px;
+    font-size: 18px;
+    color: #a5a5a5;
+}
+
+.alerte .close-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px 20px;
+}
+
+.close-btn .fa-times{
+    color: black;
+    font-size: 20px;
+}
+
+.fa-times:hover{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/*////////////////// Navbar //////////////////*/
+
+/* Fond de la navBar fixer au top */
+.affix {
+    padding: 0;
+    background: rgb(82,82,82);
+    background: linear-gradient(0deg, rgba(82,82,82,0) 0%, rgba(82,82,82,0.7217087518601191) 41%, rgba(82,82,82,0.844958051580007) 50%, rgba(82,82,82,0.9037815809917717) 61%, rgba(82,82,82,0.968207351299895) 77%, rgba(82,82,82,1) 100%); 
+}
+.nav {
+    z-index: 50;
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.logo {
+    font-family: Ubuntu-Bold sans-serif;
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    font-family: Ubuntu-Bold sans-serif;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #ce8974;
+}
+
+.nav div.main_list {
+    height: 55px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    font-family: Ubuntu-Bold sans-serif;
+    text-decoration: none;
+    color: whitesmoke;
+    line-height: 65px;
+    font-size: 1.8rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #ce8974;
+}
+
+
+/* Home section */
+.parallax {
+    max-width: 100%;
+    background: transparent;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* About me */
+
+
+.intro-box.mx-auto div.row{
+    max-width: 100%;
+    margin-left: 0px;
+}
+
+.col-sm img{
+    align-items: center;
+}
+
+.intro-box.mx-auto div.row div.col-sm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.CV.container{
+    padding: 0;
+}
+
+.CV a.btn {
+    background-color: #ce8974;
+    color: white;
+    border: none;
+}
+
+/* Style Photo de profile */
+#pp{
+    align-items: center;
+    z-index: -1;
+    position: sticky;
+    width: 100%;
+}
+
+/* Texte introductif */
+#self-about{
+    display: flexbox;
+    align-self: center;
+    z-index: -1;
+    position: relative;
+    max-width: 600px;
+    min-height: 400px;
+    max-height: 200px;
+    padding: 60px;
+    background: rgba(255, 255, 255, .3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.col-sm p{
+    align-self: center;
+}
+
+.navTrigger {
+    display: none;
+}
+
+
+
+
+/*////////////////// Media qurey section //////////////////*/
+
+
+@media screen and (min-width:1024px) and (max-width:1400px){
+    .navTrigger {
+        display: block;
+        padding-top: 5px;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        margin-top: 60px;
+        width: 50%;
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: auto; /* Définis la hauteur du background de la navBar réduite */
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(140, 140, 140);
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:1024px){
+    .navTrigger{
+        display: block;
+        padding-top: 5px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(140, 140, 140);
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 1.8rem;
+    }
+    .nav div.logo {
+        margin:0;
+        padding-left: 10px;
+    }
+    .nav div.logo a{
+        font-family: Ubuntu-Bold sans-serif;
+        padding-bottom: 5px;
+        font-size: 2.3rem;
+    }
+}
+
+
+/*////////////////// Style //////////////////*/
+
+.fond-gris{
+    background-color: #f0f0f0;
+}
+
+.container-fluid-profil{
+    padding-top: 10px;
+}
+
+.titre-Partie{
+    padding-top: 10px;
+    text-decoration: underline 4px;
+    text-decoration-color: #ce8974;
+    text-underline-offset: 20px;
+    text-align:center;
+	font-size: 4rem;
+}
+
+.monH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+
+.paragraphe {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+
+@media all and (max-width:700px){
+	.paragraphe {
+		padding:2%;
+	}
+}
+
+/*////////////////// Parcours //////////////////*/
+
+
+.parcours-bg{
+    background-color: #dedfdf;
+}
+
+.container{
+    padding:100px 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline{
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul{
+    list-style: none;
+}
+
+.timeline ul li{
+    padding: 20px;
+    background-color: #a5a5a5;
+    color: rgb(235, 235, 235);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Enlève le margin de la dernière bulle*/
+.timeline ul li:last-child{
+    margin-bottom: 0;
+}
+
+
+/* Adapte le texte du titre des bulles */
+.timeline-content h3{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Adapte le texte des bulles */
+.timeline-content p{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+
+/* Adaptation pour afficher la barre pour les pc et tablette*/
+@media only screen and (min-width:760px){
+
+    /* Affiche une ligne droite verticale */
+    .timeline::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+    }
+
+    .timeline ul li{
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    /* Met à gauche et à droite les différents objects*/
+    .timeline ul li:nth-child(odd){
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+    }
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+    }
+    
+    /* Ajoute des pastilles */
+    .timeline ul li::after{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: #525252;
+        border-radius: 50%;
+        top: 0;
+    }
+
+    .timeline ul li:nth-child(odd)::after{
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+    .timeline ul li:nth-child(even)::after{
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+}
+
+/*////////////////// Compétences //////////////////*/
+
+.skill{
+    padding: 10px 30px 50px 50px;
+    text-align: center;
+}
+
+.skill p.title-skill{
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/*////////////////// Experiences //////////////////*/
+
+
+ul.filters{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 30px 0;
+}
+
+ul.filters > li{
+    list-style: none;
+    display: inline-block;
+}
+
+ul.filters > li > a{
+    display: block;
+    color: #434e5e;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+ul.filters > li > a:hover{
+    background-color: #e6e9ed;
+}
+
+ul.filters > li.active > a{
+    color: #fff;
+    background-color: #ce8974;
+}
+
+.card{
+    position: relative;
+    margin-bottom: 50px;
+    color: #000;
+    border-radius: 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 1px 1px 1.5px rgba(0,0,0,0.075);
+}
+
+.card-head{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(67,78,94,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color :#fff;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.card-hover{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.9);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.card-body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4.title{
+    color: #434e5e;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.card-btn{
+    margin-bottom: -40px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card-btn:hover{
+    background-color: #ce8974;
+    color: #fff;
+}
+
+/*////////////////// Experiences //////////////////*/
+
+footer div.separation{
+    margin: 20px 0px 20px 0px;
+    border: solid 0.5px;
+    color: #e6e6e6;
+}
+
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
