@@ -26,7 +26,7 @@ body, html {
 .alerte{
     background: rgb(75, 75, 75);
     padding: 20px 40px;
-    min-width: 420px;
+    min-width: 360px;
     z-index: 15;
     position: fixed;
     bottom: 10px;
@@ -167,23 +167,6 @@ body, html {
 
 /* About me */
 
-
-.intro-box.mx-auto div.row{
-    max-width: 100%;
-    margin-left: 0px;
-}
-
-.col-sm img{
-    align-items: center;
-}
-
-.intro-box.mx-auto div.row div.col-sm{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 50%;
-}
-
 .CV.container{
     padding: 0;
 }
@@ -204,7 +187,6 @@ body, html {
 
 /* Texte introductif */
 #self-about{
-    display: flexbox;
     align-self: center;
     z-index: -1;
     position: relative;
@@ -216,110 +198,12 @@ body, html {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .col-sm p{
     align-self: center;
 }
 
 .navTrigger {
     display: none;
-}
-
-
-
-
-/*////////////////// Media qurey section //////////////////*/
-
-
-@media screen and (min-width:1024px) and (max-width:1400px){
-    .navTrigger {
-        display: block;
-        padding-top: 5px;
-    }
-    .nav div.logo {
-        margin-left: 15px;
-    }
-    .nav div.main_list {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-    .nav div.show_list {
-        margin-top: 60px;
-        width: 50%;
-        height: auto;
-        display: none;
-    }
-    .nav div.main_list ul {
-        flex-direction: column;
-        width: 100%;
-        height: auto; /* Définis la hauteur du background de la navBar réduite */
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: rgb(140, 140, 140);
-        /*same background color of navbar*/
-        background-position: center top;
-    }
-    .nav div.main_list ul li {
-        width: 100%;
-        text-align: right;
-    }
-    .nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 2.5rem;
-        padding: 20px;
-    }
-    .nav div.media_button {
-        display: block;
-    }
-}
-
-@media screen and (min-width:360px) and (max-width:1024px){
-    .navTrigger{
-        display: block;
-        padding-top: 5px;
-    }
-    .nav div.main_list {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-    .nav div.show_list {
-        height: auto;
-        display: none;
-    }
-    .nav div.main_list ul {
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: rgb(140, 140, 140);
-        /*same background color of navbar*/
-        background-position: center top;
-    }
-    .nav div.main_list ul li {
-        width: 100%;
-        text-align: right;
-    }
-    .nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 1.8rem;
-    }
-    .nav div.logo {
-        margin:0;
-        padding-left: 10px;
-    }
-    .nav div.logo a{
-        font-family: Ubuntu-Bold sans-serif;
-        padding-bottom: 5px;
-        font-size: 2.3rem;
-    }
 }
 
 
@@ -345,6 +229,11 @@ body, html {
 .monH2 {
 	text-align:center;
 	font-size: 4rem;
+}
+
+.monH3 {
+    text-align: center;
+    font-size: 3rem;
 }
 
 .paragraphe {
@@ -793,5 +682,148 @@ footer div.separation{
     }
     100% {
         transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+/*////////////////// Media qurey section //////////////////*/
+
+
+@media screen and (min-width:1024px) and (max-width:1400px){
+    .navTrigger {
+        display: block;
+        padding-top: 5px;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        margin-top: 60px;
+        width: 50%;
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: auto; /* Définis la hauteur du background de la navBar réduite */
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(140, 140, 140);
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:1024px){
+
+    /*////////// nav /////////*/
+    .navTrigger{
+        display: block;
+        padding-top: 5px;
+    }
+
+    .nav div.container-fluid{
+        padding:0;
+    }
+
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(140, 140, 140);
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 1.8rem;
+    }
+    .nav div.logo {
+        margin:0;
+        padding-left: 10px;
+    }
+    .nav div.logo a{
+        font-family: Ubuntu-Bold sans-serif;
+        padding-bottom: 5px;
+        font-size: 2.3rem;
+    }
+
+    .intro-box div{
+        z-index: 5;
+    }
+
+    /*////////// Introduction /////////*/
+
+    .intro-box div.row{
+        max-width: 100%;
+        margin: 15px;
+    }
+
+    .row{
+        margin: 0 !important;
+    }
+
+    #intro-text{
+        padding:0;
+        margin:0;
+    }
+
+    #pp{
+        margin-top: 80px;
+    }
+
+    #self-about{
+        margin: 10px;
+        padding:50px;
+    }
+
+    /*////////// Style /////////*/
+
+    .monH3{
+        font-size: 2rem;
+    }
+
+    .titre-Partie{
+        font-size: 3rem;
+    }
+
+    .fit-content{
+        font-size: 20px;
     }
 }
