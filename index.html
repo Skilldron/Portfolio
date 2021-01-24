@@ -25,14 +25,17 @@
     
     </head>
 <body>
+    
     <!-- Alertes -->
-    <div class="alerte show">
+    <div id="status"></div>
+
+    <!-- <div class="alerte show">
         <span class="fas fa-exclamation-circle"></span>
         <span class="msg"> Merci de votre visite ! Le site est encore en production et toutes les features ne sont pas présentes. Merci de votre compréhension</span>
         <button class="close-btn close-alert">
             <span class="fas fa-times"></span>
         </button>
-    </div>
+    </div>  -->
 
     <!--NavBar-->  
     <nav class="nav">
@@ -203,7 +206,7 @@
                         <div class="col-lg-4 item php">
                             <div class="card">
                                 <div class="card-head">
-                                    <img src="images/image.jpg" alt="" class="img-fluid card-img">
+                                    <img src="images/projets/ludotheque.png" alt="" class="img-fluid card-img">
                                     <div class="card-overlay"><h2>Projet Marathon</h2></div>
                                     <div class="card-hover">
                                         <h2>Projet Marathon</h2>
@@ -225,7 +228,7 @@
                             <div class="card">
                                 <div class="card-head">
                                     <img src="images/image.jpg" alt="" class="img-fluid card-img">
-                                    <div class="card-overlay"><h2>Jeux video</h2></div>
+                                    <div class="card-overlay"><h2>Jeu vidéo</h2></div>
                                     <div class="card-hover">
                                         <h2>Escape Game</h2>
                                         <p>Projet de groupe du 2ème semestre, nous devions créer un jeu 2D qui à pour thème un Escape game.
@@ -240,27 +243,7 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-lg-4 item html">
-                            <div class="card">
-                                <div class="card-head">
-                                    <img src="images/image.jpg" alt="" class="img-fluid card-img">
-                                    <div class="card-overlay"><h2>Refonte du site de l'IUT de lens</h2></div>
-                                    <div class="card-hover">
-                                        <h2>Refonte du site de l'IUT de lens</h2>
-                                        <p>Projet de groupe du 1er semestre, nous devions refaire toute la partie "Partir à l'étranger"<br>
-                                           Les langages utilisés sont HTML/CSS/JavaScript ainsi que Bootstrap.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="card-body text-center">
-                                    <h4 class="title">HTML</h4>
-                                    <a href="https://github.com/Skilldron/projet_cdin" target="_blank" class="btn btn-lg card-btn">Voir plus</a>
-                                </div>
-                            </div>
-                        </div>
-                   
+                                           
                     </div>
                 </div>
             </div>
@@ -275,24 +258,28 @@
             
         <!-- Formulaire de contact -->
         <div class="wrap-contact100">
-            <form action="#" class="contact100-form validate-form">
-                <span class="contact100-form-title"><p class="fit-content">
-                    Envoyez moi un message <br>
-                    harold.delory@gmail.com</p>
+            <form action="https://formspree.io/f/xvovlwyr" method="POST" class="contact100-form validate-form" id="form">
+                <span class="contact100-form-title">
+                    <p class="fit-content">Envoyez moi un message</p>
                 </span>
             
                 <div class="wrap-input100 validate-input" data-validate="Veuillez entrer votre nom">
-                    <input class="input100" type="text" name="name" placeholder="Nom Prénom">
+                    <input class="input100" type="text" id="name" name="name" placeholder="Nom Prénom">
                     <span class="focus-input100"></span>
                 </div>
             
                 <div class="wrap-input100 validate-input" data-validate = "Insérer un E-mail de type : exemple@domaine.com">
-                    <input class="input100" type="text" name="email" placeholder="E-mail">
+                    <input class="input100" type="text" id="email" name="email" placeholder="E-mail">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Insérer un E-mail de type : exemple@domaine.com">
+                    <input class="input100" type="text" id="sujet" name="sujet" placeholder="Sujet">
                     <span class="focus-input100"></span>
                 </div>
             
                 <div class="wrap-input100 validate-input" data-validate = "Insérer votre message">
-                    <textarea class="input100" name="message" placeholder=" Message"></textarea>
+                    <textarea class="input100" id="message" name="message" placeholder=" Message"></textarea>
                     <span class="focus-input100"></span>
                 </div>
             
@@ -325,14 +312,16 @@
     </footer>
     
     <!-- Script Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <scrip src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></scrip>
 
     <!-- Isotope (filtre)-->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <scrip src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></scrip>
 
     <!-- Script JS -->    
     <script src="js/anime.js"></script>
     <script src="js/filter.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/formNotif.js"></script>
 
 
 </body>
