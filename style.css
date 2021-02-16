@@ -12,6 +12,7 @@
     margin: 0px; 
     padding: 0px; 
     box-sizing: border-box;
+    overflow: hidden;
     scroll-behavior: smooth;
     scroll-margin-top: 55px;
 }
